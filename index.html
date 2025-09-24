@@ -1,19 +1,81 @@
 <!doctype html>
-<html lang="es"><head>
-<meta charset="utf-8" />
-<title>Portafolio - <Carlos></title>
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<link rel="stylesheet" href="assets/styles.css" />
-</head><body>
-<main>
-<h1>Hola, soy <TU Carlos></h1>
-<p>Desarrollador</p>
-<section>
-<h2>Proyectos</h2>
-<ul>
-<li><a href="#">Proyecto A</a></li>
-<li><a href="#">Proyecto B</a></li>
-</ul>
-</section>
-</main>
-</body></html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Portafolio - Carlos Urzua</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Portafolio profesional de [Tu Nombre], estudiante de Informática en la UBB." />
+    <link rel="stylesheet" href="assets/styles.css" />
+</head>
+<body>
+    <header>
+        <div class="container">
+            <nav>
+                <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
+                <a href="#proyectos" class="nav-link">Proyectos</a>
+                <a href="#habilidades" class="nav-link">Habilidades</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section id="hero">
+            <h1>Hola, soy Carlos Urzua</h1>
+            <p class="subtitle">Desarrollador de Software y estudiante de <strong>Ingeniería de Ejecución en Computación e Informática</strong> en la Universidad del Bío-Bío.</p>
+        </section>
+
+        <section id="sobre-mi">
+            <h2>Sobre Mí</h2>
+            <p>
+                desarrollo web, mobile, ciencia de datos y cuáles son tus objetivos profesionales. 
+                Apasionado por crear soluciones eficientes y escalables, con un fuerte interés en el desarrollo backend y la computación en la nube.
+            </p>
+        </section>
+
+        <section id="proyectos">
+            <h2>Proyectos Destacados</h2>
+            <div class="grid-proyectos">
+                <div class="proyecto-card">
+                    <h3>[Nombre del Proyecto 1]</h3>
+                    <p>[Descripción breve del proyecto: qué problema resuelve, qué tecnologías usaste. Por ejemplo: "Sistema de gestión de inventario para pymes desarrollado con Python, Django y PostgreSQL."]</p>
+                    <a href="[Enlace al repositorio en GitHub o demo]" target="_blank">Ver Código</a>
+                </div>
+
+                <div class="proyecto-card">
+                    <h3>[Nombre del Proyecto 2]</h3>
+                    <p>[Descripción breve del proyecto 2. Por ejemplo: "Aplicación móvil para Android que monitorea la calidad del aire utilizando datos de una API pública, construida con Kotlin y Jetpack Compose."]</p>
+                    <a href="[Enlace al repositorio en GitHub o demo]" target="_blank">Ver Código</a>
+                </div>
+                
+                <div class="proyecto-card">
+                    <h3>[Nombre del Proyecto 3]</h3>
+                    <p>[Descripción breve del proyecto 3. Por ejemplo: "Dashboard interactivo para la visualización de datos electorales, implementado con React y D3.js."]</p>
+                    <a href="[Enlace al repositorio en GitHub o demo]" target="_blank">Ver Código</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="habilidades">
+            <h2>Habilidades Técnicas</h2>
+            <ul>
+                <li><strong>Lenguajes:</strong> [Ej: Python, Java, JavaScript, TypeScript, SQL]</li>
+                <li><strong>Frameworks y Librerías:</strong> [Ej: Django, Spring Boot, React, Node.js, Angular]</li>
+                <li><strong>Bases de Datos:</strong> [Ej: PostgreSQL, MySQL, MongoDB, Firebase]</li>
+                <li><strong>Herramientas y DevOps:</strong> [Ej: Git, Docker, CI/CD con GitHub Actions, AWS]</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer id="contacto">
+        <div class="container">
+            <h2>Contacto</h2>
+            <p>Puedes encontrarme en las siguientes plataformas:</p>
+            <div class="social-links">
+                <a href="https://github.com/urzua847" target="_blank">GitHub</a>
+                <a href="mailto:urzua847@gmail.com">Email</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
