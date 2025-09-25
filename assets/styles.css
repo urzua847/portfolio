@@ -1,18 +1,21 @@
-/* Estilos Generales */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* --- Variables y Estilos Generales --- */
 :root {
-    --color-fondo: #f4f7f5;
-    --color-texto: #333;
+    --color-fondo: #f8f9fa; /* Un gris muy claro */
+    --color-texto: #212529;
     --color-primario: #005a9c; /* Azul UBB */
-    --color-acento: #007bff;
+    --color-acento: #0d6efd; /* Un azul más brillante para interacciones */
     --ancho-max: 960px;
+    --sombra-suave: 0 4px 15px rgba(0, 0, 0, 0.07);
 }
 
 body {
-    font-family: 'Segoe UI', system-ui, sans-serif;
+    font-family: 'Poppins', sans-serif; /* Nueva tipografía */
     margin: 0;
     background-color: var(--color-fondo);
     color: var(--color-texto);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .container {
@@ -21,14 +24,19 @@ body {
     padding: 0 1.5rem;
 }
 
-/* Encabezado y Navegación */
+h1, h2, h3 {
+    font-weight: 700; /* Títulos más definidos */
+}
+
+/* --- Encabezado y Navegación --- */
 header {
     background-color: #fff;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid #dee2e6;
     padding: 1rem 0;
     position: sticky;
     top: 0;
     z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Sombra sutil */
 }
 
 nav {
@@ -41,64 +49,72 @@ nav {
     color: var(--color-primario);
     text-decoration: none;
     font-weight: 600;
-    transition: color 0.2s ease-in-out;
+    padding-bottom: 5px;
+    border-bottom: 2px solid transparent; /* Línea inferior para hover */
+    transition: all 0.2s ease-in-out;
 }
 
 .nav-link:hover {
     color: var(--color-acento);
+    border-bottom-color: var(--color-acento); /* Efecto hover */
 }
 
-/* Secciones Principales */
+/* --- Contenido Principal --- */
 main {
-    padding-top: 2rem;
-    padding-bottom: 3rem;
+    padding: 4rem 0; /* Más espacio vertical */
 }
 
 section {
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 
-h1, h2 {
+/* Sección Hero (Tu nombre) */
+#hero h1 {
+    font-size: 3.5rem; /* Más grande e impactante */
     color: var(--color-primario);
-    border-bottom: 2px solid var(--color-acento);
+    margin-bottom: 0.5rem;
+}
+
+#hero .subtitle {
+    font-size: 1.25rem;
+    color: #495057;
+    margin-bottom: 2rem;
+}
+
+/* Títulos de sección */
+h2 {
+    font-size: 2rem;
+    color: var(--color-primario);
+    border-bottom: 3px solid var(--color-acento);
     padding-bottom: 0.5rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 2rem;
 }
 
-h1 {
-    font-size: 2.5rem;
-    border: none;
-}
-
-.subtitle {
-    font-size: 1.2rem;
-    color: #555;
-    margin-top: -1rem;
-}
-
-/* Proyectos */
+/* --- Proyectos --- */
 .grid-proyectos {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 1.5rem;
 }
 
 .proyecto-card {
     background-color: #fff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    padding: 1.5rem;
+    border: 1px solid #e9ecef;
+    border-radius: 12px; /* Bordes más redondeados */
+    padding: 1.5rem 2rem;
+    box-shadow: var(--sombra-suave);
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .proyecto-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px); /* Efecto de "levantar" la tarjeta */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
 }
 
 .proyecto-card h3 {
     margin-top: 0;
     color: var(--color-acento);
+    font-size: 1.4rem;
 }
 
 .proyecto-card a {
@@ -107,8 +123,9 @@ h1 {
     text-decoration: none;
     background-color: var(--color-primario);
     color: #fff;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
     transition: background-color 0.2s ease;
 }
 
@@ -116,22 +133,27 @@ h1 {
     background-color: var(--color-acento);
 }
 
-/* Habilidades */
+/* --- NUEVO: Estilo de "píldoras" para habilidades --- */
 #habilidades ul {
     list-style: none;
     padding: 0;
-}
-#habilidades li {
-    background-color: #e9ecef;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    margin-bottom: 0.5rem;
+    display: flex;
+    flex-wrap: wrap; /* Para que se ajusten en varias líneas */
+    gap: 0.75rem; /* Espacio entre píldoras */
 }
 
-/* Pie de Página (Contacto) */
+#habilidades li {
+    background-color: #e9ecef;
+    color: #343a40;
+    padding: 0.5rem 1rem;
+    border-radius: 50px; /* Forma de píldora */
+    font-weight: 600;
+}
+
+/* --- Footer y Contacto --- */
 footer {
-    background-color: var(--color-primario);
-    color: #fff;
+    background-color: #343a40; /* Footer oscuro para contraste */
+    color: #f8f9fa;
     text-align: center;
     padding: 3rem 0;
 }
@@ -141,15 +163,25 @@ footer h2 {
     border: none;
 }
 
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
 .social-links a {
     color: #fff;
     text-decoration: none;
-    margin: 0 1rem;
     font-size: 1.1rem;
-    border-bottom: 1px dotted #fff;
-    transition: color 0.2s ease;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: 2px solid #fff;
+    border-radius: 50px;
+    transition: all 0.2s ease;
 }
 
 .social-links a:hover {
-    color: #ddd;
+    background-color: #fff;
+    color: var(--color-primario);
 }
