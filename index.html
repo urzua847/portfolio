@@ -1,12 +1,15 @@
 <!doctype html>
 <html lang="es">
+
 <head>
     <meta charset="utf-8" />
     <title>Portafolio - Carlos Urzúa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description" content="Portafolio profesional de [Tu Nombre], estudiante de Informática en la UBB." />
     <link rel="stylesheet" href="assets/styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -15,20 +18,44 @@
                 <a href="#proyectos" class="nav-link">Proyectos</a>
                 <a href="#habilidades" class="nav-link">Habilidades</a>
                 <a href="#contacto" class="nav-link">Contacto</a>
+                <button id="theme-toggle" class="theme-toggle" aria-label="Cambiar tema">
+                    <i class="fas fa-moon"></i>
+                </button>
             </nav>
         </div>
     </header>
 
     <main class="container">
         <section id="hero">
-            <h1>Hola, soy Carlos Urzúa</h1>
-            <p class="subtitle">Desarrollador de Software y estudiante de <strong>Ingeniería de Ejecución en Computación e Informática</strong> en la Universidad del Bío-Bío.</p>
+            <div class="hero-wrapper">
+                <div class="hero-content">
+                    <h1>Carlos Urzúa Mansilla</h1>
+                    <h2 class="subtitle">Ingeniero de Software | Fullstack Developer</h2>
+                    <p class="location"><i class="fas fa-globe-americas"></i> Concepción, Chile</p>
+
+                    <div class="hero-social">
+                        <a href="mailto:urzua847@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                        <a href="tel:+56988832514" aria-label="Llamar"><i class="fas fa-phone"></i></a>
+                        <a href="https://www.linkedin.com/in/carlos-urzua-mansilla/" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/urzua847" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div class="hero-image-container">
+                    <div class="hero-placeholder">
+                        <i class="fas fa-user-circle"></i>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <section id="sobre-mi">
             <h2>Sobre Mí</h2>
             <p>
-                Apasionado por la tecnología, me especializo en transformar ideas en soluciones de software eficientes y escalables. Cuento con experiencia en desarrollo web y móvil, y un creciente interés en la ciencia de datos. Mi principal enfoque es el desarrollo backend y la arquitectura en la nube, áreas en las que busco construir sistemas robustos que resuelvan problemas complejos.
+                Apasionado por la tecnología, me especializo en transformar ideas en soluciones de software eficientes y
+                escalables. Cuento con experiencia en desarrollo web y móvil, y un creciente interés en la ciencia de
+                datos. Mi principal enfoque es el desarrollo backend y la arquitectura en la nube, áreas en las que
+                busco construir sistemas robustos que resuelvan problemas complejos.
             </p>
         </section>
 
@@ -37,44 +64,83 @@
             <div class="grid-proyectos">
                 <div class="proyecto-card">
                     <h3>Asistente de Calendario con IA</h3>
-                    <p>Un bot conversacional inteligente que se integra con WhatsApp para gestionar eventos de Google Calendar. Utiliza IA (Google Gemini) para interpretar comandos en lenguaje natural, permitiendo agendar, editar, consultar y cancelar citas de forma rápida y eficiente, directamente desde el chat.</p>
+                    <p>Un bot conversacional inteligente que se integra con WhatsApp para gestionar eventos de Google
+                        Calendar. Utiliza IA (Google Gemini) para interpretar comandos en lenguaje natural, permitiendo
+                        agendar, editar, consultar y cancelar citas de forma rápida y eficiente, directamente desde el
+                        chat.</p>
                     <a href="https://github.com/urzua847/asistente-calendario" target="_blank">Ver Código</a>
                 </div>
 
                 <div class="proyecto-card">
                     <h3>Sistema de Trazabilidad y Gestión de Inventario</h3>
-                    <p>Aplicación web para monitorear la trazabilidad de productos del mar, desde la recepción hasta su distribución. El sistema optimiza la cadena de suministro a través de la gestión de inventario en tiempo real, registrando cada proceso para asegurar la integridad y el control total de los productos.</p>
+                    <p>Aplicación web para monitorear la trazabilidad de productos del mar, desde la recepción hasta su
+                        distribución. El sistema optimiza la cadena de suministro a través de la gestión de inventario
+                        en tiempo real, registrando cada proceso para asegurar la integridad y el control total de los
+                        productos.</p>
                     <a href="[Enlace al repositorio en GitHub o demo]" target="_blank">Ver Código</a>
                 </div>
-                
-                <div class="proyecto-card">
-                    <h3>Nombre del Proyecto 3</h3>
-                    <p>[Descripción breve del proyecto 3. Por ejemplo: "Dashboard interactivo para la visualización de datos electorales, implementado con React y D3.js."]</p>
-                    <a href="[Enlace al repositorio en GitHub o demo]" target="_blank">Ver Código</a>
-                </div>
+
             </div>
         </section>
 
         <section id="habilidades">
             <h2>Habilidades Técnicas</h2>
-            <ul>
-                <li><strong>Lenguajes:</strong> Python, Java, JavaScript, TypeScript, SQL</li>
-                <li><strong>Frameworks y Librerías:</strong> Django, Spring Boot, React, Node.js, Angular</li>
-                <li><strong>Bases de Datos:</strong> PostgreSQL, MySQL, MongoDB, Firebase</li>
-                <li><strong>Herramientas y DevOps:</strong> Git, Docker, CI/CD con GitHub Actions, AWS</li>
-            </ul>
+            <div class="skills-grid">
+                <!-- Data Science & Languages -->
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h4>Python</h4>
+                    <span>Lenguaje</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-java"></i>
+                    <h4>Java</h4>
+                    <span>Lenguaje</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h4>JavaScript</h4>
+                    <span>Lenguaje</span>
+                </div>
+
+                <!-- Frameworks -->
+                <div class="skill-card">
+                    <i class="fab fa-react"></i>
+                    <h4>React</h4>
+                    <span>Frontend</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-server"></i>
+                    <h4>Django</h4>
+                    <span>Backend</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-leaf"></i>
+                    <h4>Spring Boot</h4>
+                    <span>Backend</span>
+                </div>
+
+                <!-- Tools & DB -->
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h4>SQL</h4>
+                    <span>Base de Datos</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-docker"></i>
+                    <h4>Docker</h4>
+                    <span>DevOps</span>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-aws"></i>
+                    <h4>AWS</h4>
+                    <span>Cloud</span>
+                </div>
+            </div>
         </section>
     </main>
 
-    <footer id="contacto">
-        <div class="container">
-            <h2>Contacto</h2>
-            <p>Puedes encontrarme en las siguientes plataformas:</p>
-            <div class="social-links">
-                <a href="https://github.com/urzua847" target="_blank">GitHub</a>
-                <a href="mailto:urzua847@gmail.com">Email</a>
-            </div>
-        </div>
-    </footer>
+    <script src="assets/script.js"></script>
 </body>
+
 </html>
