@@ -236,24 +236,23 @@ section h2::after {
     border-color: var(--color-text-primary);
 }
 
-/* Image Placeholder */
-.hero-image-container {
+/* Hero Image */
+.hero-image-wrapper {
     flex-shrink: 0;
+    position: relative;
+    z-index: 10;
 }
 
-.hero-placeholder {
+.hero-image {
     width: 280px;
     height: 320px;
-    background-color: #d1d5db;
-    /* Gray placeholder */
+    object-fit: cover;
     border-radius: 30px;
-    /* Organic shape */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 5rem;
-    color: rgba(255, 255, 255, 0.5);
-    box-shadow: var(--shadow-lg);
+    transition: var(--transition);
+}
+
+.hero-image:hover {
+    transform: translateY(-5px);
 }
 
 /* Dark Mode Adjustments for Hero */
@@ -273,9 +272,7 @@ section h2::after {
     color: #111827;
 }
 
-[data-theme="dark"] .hero-placeholder {
-    background-color: #374151;
-}
+
 
 /* Responsive */
 @media (max-width: 768px) {
@@ -291,12 +288,13 @@ section h2::after {
         align-items: center;
     }
 
-    .hero-placeholder {
-        width: 200px;
-        height: 200px;
+    .hero-image {
+        width: 220px;
+        height: 220px;
         border-radius: 50%;
         /* Circle on mobile */
     }
+
 }
 
 /* --- About Me --- */
